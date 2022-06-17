@@ -29,7 +29,7 @@
         "SUDO_USERS": {
             "description": "List of User ID users count as admin everywhere (separate using space)",
             "required": false
-            "value": "5150456401"
+
         }
     },
     "addons": [],
