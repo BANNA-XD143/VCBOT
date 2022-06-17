@@ -5,7 +5,7 @@
 
 <p align="center"><a href="https://www.github.com/BANNA-XD143"><img src="https://telegra.ph/file/de6884ca79cd245f75cc7.jpg" width="2000"></a></p>
 
-Telegram bot to generate pyrogram and telethon string session.
+Telegram bot to generate pyrogram string session.
 
 
 ## Usage
