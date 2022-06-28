@@ -61,7 +61,7 @@ Telegram bot to generate pyrogram string session.
 
 ## Support
 
-𝐂𝐇𝐀𝐍𝐍𝐄𝐋 :- [❛-𝐌𝐑'𝐁𝐀𝐍𝐍𝐀 🚬 𝐊𝐈𝐍𝐆-𝐱𝐃 °](https://t.me/BANNA_XD)
+ 𝐎𝐖𝐍𝐄𝐑 :- [❛-𝐌𝐑'𝐁𝐀𝐍𝐍𝐀 🚬 𝐊𝐈𝐍𝐆-𝐱𝐃 °](https://t.me/BANNA_XD)
 
 𝐆𝐑𝐎𝐔𝐏 :- [𝐆𝐑𝐎𝐔𝐏 𝐒𝐔𝐏𝐏𝐎𝐑𝐓](https://t.me/AARU_SUPPORT)
 
