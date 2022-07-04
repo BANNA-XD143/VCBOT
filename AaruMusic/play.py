@@ -84,7 +84,7 @@ async def ytdl(link):
         return 0, stderr.decode()
 
 
-@Client.on_message(filters.command(["play"], prefixes=f"{SUDO_USERS}"))
+@Client.on_message(filters.command(["play"], prefixes=f"{SUDOUSERS}"))
 async def play(client, m: Message):
     replied = m.reply_to_message
     chat_id = m.chat.id
