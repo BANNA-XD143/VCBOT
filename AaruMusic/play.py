@@ -324,12 +324,12 @@ async def vplay(client, m: Message):
                             await huehue.edit(f"`{ep}`")
 
 
-@Client.on_message(filters.command(["playfrom"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["playfrom"], prefixes=f"{SUDO_USERS}"))
 async def playfrom(client, m: Message):
     chat_id = m.chat.id
     if len(m.command) < 2:
         await m.reply(
-            f"**USE:** \n\n`{HNDLR}playfrom [chat_id/username]` \n`{SUDO_USERS}playfrom [chat_id/username]`"
+            f"**USE:** \n\n`{SUDO_USERS}playfrom [chat_id/username]` \n`{SUDO_USERS}playfrom [chat_id/username]`"
         )
     else:
         args = m.text.split(maxsplit=1)[1]
