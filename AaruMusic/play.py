@@ -84,7 +84,7 @@ async def ytdl(link):
         return 0, stderr.decode()
 
 
-@Client.on_message(filters.command(["play"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["play"], prefixes=f"{SUDO_USERS}"))
 async def play(client, m: Message):
     replied = m.reply_to_message
     chat_id = m.chat.id
@@ -195,7 +195,7 @@ async def play(client, m: Message):
                             await huehue.edit(f"`{ep}`")
 
 
-@Client.on_message(filters.command(["vplay"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["vplay"], prefixes=f"{SUDO_USERS}"))
 async def vplay(client, m: Message):
     replied = m.reply_to_message
     chat_id = m.chat.id
@@ -329,7 +329,7 @@ async def playfrom(client, m: Message):
     chat_id = m.chat.id
     if len(m.command) < 2:
         await m.reply(
-            f"**USE:** \n\n`{HNDLR}playfrom [chat_id/username]` \n`{HNDLR}playfrom [chat_id/username]`"
+            f"**USE:** \n\n`{HNDLR}playfrom [chat_id/username]` \n`{SUDO_USERS}playfrom [chat_id/username]`"
         )
     else:
         args = m.text.split(maxsplit=1)[1]
@@ -371,13 +371,13 @@ async def playfrom(client, m: Message):
                     )
             await hmm.delete()
             await m.reply(
-                f"➕ Added {lmt} Song Into the Queue\n• Click {HNDLR}playlist To view Full Playlist**"
+                f"➕ Added {lmt} Song Into the Queue\n• Click {SUDO_USERS}playlist To view Full Playlist**"
             )
         except Exception as e:
             await hmm.edit(f"**ERROR** \n`{e}`")
 
 
-@Client.on_message(filters.command(["playlist", "queue"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["playlist", "queue"], prefixes=f"{SUDO_USERS}"))
 async def playlist(client, m: Message):
     chat_id = m.chat.id
     if chat_id in QUEUE:
