@@ -138,7 +138,7 @@ async def play(client, m: Message):
 
     else:
         if len(m.command) < 2:
-            await m.reply("Reply to Audio Files or provide something for Searches")
+            await m.reply("🔥")
         else:
             await m.delete()
             huehue = await m.reply("💔")
@@ -264,7 +264,7 @@ async def vplay(client, m: Message):
     else:
         if len(m.command) < 2:
             await m.reply(
-                "**Reply to an Audio File or provide something for Search**"
+                "**🔥**"
             )
         else:
             await m.delete()
