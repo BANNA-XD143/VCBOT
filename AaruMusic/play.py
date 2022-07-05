@@ -92,7 +92,7 @@ async def play(client, m: Message):
     if replied:
         if replied.audio or replied.voice:
             await m.delete()
-            huehue = await replied.reply("**🔄 Searching**")
+            huehue = await replied.reply("**😐**")
             dl = await replied.download()
             link = replied.link
             if replied.audio:
@@ -141,7 +141,7 @@ async def play(client, m: Message):
             await m.reply("Reply to Audio Files or provide something for Searches")
         else:
             await m.delete()
-            huehue = await m.reply("🔎 Searching")
+            huehue = await m.reply("💔")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             if search == 0:
@@ -153,7 +153,7 @@ async def play(client, m: Message):
                 thumbnail = search[3]
                 hm, ytlink = await ytdl(url)
                 if hm == 0:
-                    await huehue.edit(f"**YTDL ERROR ⚠️** \n\n`{ytlink}`")
+                    await huehue.edit(f"**💔** \n\n`{ytlink}`")
                 else:
                     if chat_id in QUEUE:
                         pos = add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
@@ -203,7 +203,7 @@ async def vplay(client, m: Message):
     if replied:
         if replied.video or replied.document:
             await m.delete()
-            huehue = await replied.reply("**🔄 Processing**")
+            huehue = await replied.reply("**🔥**")
             dl = await replied.download()
             link = replied.link
             if len(m.command) < 2:
@@ -268,7 +268,7 @@ async def vplay(client, m: Message):
             )
         else:
             await m.delete()
-            huehue = await m.reply("**🔎 Searching **")
+            huehue = await m.reply("**💔**")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             Q = 720
@@ -284,7 +284,7 @@ async def vplay(client, m: Message):
                 thumbnail = search[3]
                 hm, ytlink = await ytdl(url)
                 if hm == 0:
-                    await huehue.edit(f"**YTDL ERROR ⚠️** \n\n`{ytlink}`")
+                    await huehue.edit(f"**💔** \n\n`{ytlink}`")
                 else:
                     if chat_id in QUEUE:
                         pos = add_to_queue(chat_id, songname, ytlink, url, "Video", Q)
@@ -341,7 +341,7 @@ async def playfrom(client, m: Message):
             limit = 10
             lmt = 9
         await m.delete()
-        hmm = await m.reply(f"🔎 Take {limit} Random Song From {chat}**")
+        hmm = await m.reply(f"😐 {limit} Random Song From {chat}**")
         try:
             async for x in bot.search_messages(chat, limit=limit, filter="audio"):
                 location = await x.download()
@@ -398,4 +398,4 @@ async def playlist(client, m: Message):
                 QUE = QUE + "\n" + f"**#{x}** - [{hmm}]({hmmm}) | `{hmmmm}`\n"
             await m.reply(QUE, disable_web_page_preview=True)
     else:
-        await m.reply("**❌ Doesn't play anything**")
+        await m.reply("**🥺**")
