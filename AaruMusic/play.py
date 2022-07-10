@@ -26,7 +26,7 @@ def ytsearch(query):
         songname = data["title"]
         url = data["link"]
         duration = data["duration"]
-        thumbnail = f"💔"
+        thumbnail = f"🔥"
         return [songname, url, duration, thumbnail]
     except Exception as e:
         print(e)
@@ -59,7 +59,7 @@ def ytsearch(query):
         songname = data["title"]
         url = data["link"]
         duration = data["duration"]
-        thumbnail = f"💔"
+        thumbnail = f"🔥"
         return [songname, url, duration, thumbnail]
     except Exception as e:
         print(e)
